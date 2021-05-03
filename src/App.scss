@@ -1,0 +1,141 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+}
+.wrapper {
+  font-size: 24px;
+  width: 300px;
+  margin: 150px auto 0;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+  input {
+    border: 1px solid rgb(187, 187, 187);
+    padding: 5px;
+    width: 100%;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  button {
+    display: inline-block;
+    text-align: center;
+    background-color: rgb(64, 173, 69);
+    color: #fff;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    padding: 5px 0;
+    &:active {
+      background-color: rgb(63, 148, 67);
+    }
+    &:disabled {
+      background-color: rgba(64, 173, 69, 0.514);
+    }
+    p {
+      line-height: 1.5;
+      transform: translateY(1px);
+      font-size: 20px;
+    }
+  }
+}
+.chat {
+  max-width: 900px;
+  width: 100%;
+  height: 550px;
+  margin: 150px auto 0;
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 550px;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 15px;
+    overflow: hidden;
+    .users {
+      grid-column: 1/2;
+      background-color: rgb(243, 243, 243);
+      .room-name {
+        padding-bottom: 15px;
+        border-bottom: 2px solid rgb(214, 214, 214);
+        p {
+          font-size: 18px;
+          padding: 15px 15px 0;
+          font-weight: 700;
+          text-decoration: underline;
+        }
+      }
+      .all-users {
+        padding: 20px 15px;
+        .users-amount {
+          font-weight: 700;
+          letter-spacing: 1px;
+        }
+        li {
+          margin-top: 15px;
+          background-color: #fff;
+          padding: 10px;
+          border-radius: 5px;
+        }
+      }
+    }
+    .messages {
+      grid-column: 2/5;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 25px;
+      &__screen {
+        overflow: auto;
+        flex: 0 0 65%;
+        div {
+          margin-bottom: 10px;
+          padding-right: 10px;
+        }
+        p {
+          width: 100%;
+          background-color: blue;
+          color: #fff;
+          padding: 10px;
+          font-size: 16px;
+          border-radius: 10px;
+          overflow-wrap: break-word;
+        }
+        span {
+          margin-top: 1px;
+          background-color: rgba(128, 128, 128, 0.616);
+          display: inline-block;
+          color: #fff;
+          padding: 7px;
+          border-radius: 10px;
+          font-size: 12px;
+          margin-left: 15px;
+          user-select: none;
+        }
+      }
+      &__to-send {
+        padding-top: 20px;
+        border-top: 1px solid rgb(206, 203, 203);
+        textarea {
+          padding: 5px;
+          border: 1px solid rgb(224, 224, 224);
+          display: block;
+          margin-bottom: 20px;
+          font-size: 18px;
+          width: 100%;
+          height: 100px;
+          resize: none;
+        }
+        .btn {
+          color: #fff;
+          font-size: 18px;
+          font-weight: 700;
+          background-color: blue;
+          padding: 10px 30px;
+          border-radius: 5px;
+          &:active {
+            background-color: rgb(3, 3, 216);
+          }
+        }
+      }
+    }
+  }
+}
